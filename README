@@ -1,6 +1,32 @@
-These files originally came from the usfm_rev1 usfm.
+These files originally came from the usfm_rev1 usfm, then from usfm_rev2 usfm.
+
+For usfm_rev2:
 They had a handful of \qt...\qt* problems that Matt Postiff fixed in Bibledit.
 I highlighted the problems in an email to Elizabeth Wheeler on 10/11/2018.
 Bibledit exported fine, but one difference was notable compared to the original
 USFM files: the \rq...\rq* marker was put on its own line. This caused, for example
 50 trivial whitespace differences between the rev1 Matthew usfm and the rev2 usfm.
+
+For usfm_rev3:
+They had diamond markers in them to indicate glossary words. These marks
+had to be removed before publication in the Android app.
+
+The diamond marker is encoded as 0xe2 99 a6.
+The following command was used to remove these characters:
+replace 's/\xe2\x99\xa6//g' test.txt
+
+As a check I did this:
+
+ls -l *.usfm | ~/scripts/sumcol 5
+   (These are the new, diamond-less files.)
+Sum: 2282308
+
+ls -l *.usfm.bak | ~/scripts/sumcol 5
+   (These are the original files.)
+Sum: 2282959
+
+The difference should be evenly divisible by three, since I removed 3
+bytes per occurrence.
+
+The difference is 651, which when divided by 3 = 217. That's how many
+diamond markers were removed.
