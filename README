@@ -1,0 +1,6 @@
+These files originally came from the usfm_rev1 usfm.
+They had a handful of \qt...\qt* problems that Matt Postiff fixed in Bibledit.
+I highlighted the problems in an email to Elizabeth Wheeler on 10/11/2018.
+Bibledit exported fine, but one difference was notable compared to the original
+USFM files: the \rq...\rq* marker was put on its own line. This caused, for example
+50 trivial whitespace differences between the rev1 Matthew usfm and the rev2 usfm.
