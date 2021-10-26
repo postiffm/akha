@@ -1,17 +1,17 @@
-id	30
+id	31
 h	30
 toc1	30
 toc2	30
 toc3	30
-mt1	30
+mt1	31
 ili	90
 imt1	30
-ip	132
+ip	133
 iot	30
 io1	154
 c	491
-s1	1345
-p	4407
+s1	1362
+p	4454
 v	12866
 f	124
 fr	124
@@ -37,3 +37,12 @@ rq	311
 rq*	311
 nb	67
 io3	2
+rem	1
+k	47
+k*	47
+tl	30
+tl*	30
+xt	65
+xt*	65
+it	34	<<== This marker is not in the BI approved list
+it*	34	<<== This marker is not in the BI approved list
